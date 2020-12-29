@@ -1,5 +1,5 @@
 """
-** Description: **
+Description:
 
 Ram a software engineer faces an unexpected challenge. During the Covid19 lockdown,
 he is locked to his Paying Guest room. To ease the burden his company provides a
