@@ -1,3 +1,8 @@
+""" Author name: Deepak HG
+    Date: 30th December 2020
+    Description: Create a program that can suggest streaming services based on different subscription plans.
+"""
+
 import sys
 
 subscribe_plan = {"prime": 999, "zee5": 999, "sony liv": 999, "netflix": 1947}
