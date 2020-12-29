@@ -1,1 +1,154 @@
-""" Test case1 """
+"""
+Description:
+
+Ram a software engineer faces an unexpected challenge. During the Covid19 lockdown,
+he is locked to his Paying Guest room. To ease the burden his company provides a
+5000Rs one-time amount for any online streaming services. Ram a curious guy wants
+to understand which set of streaming services would be affordable for his budget.
+Create a program that can suggest streaming services based on different subscription plans.
+
+Input:
+Budget: 5000rs
+Providers: Prime, zee5, sony liv, Netflix
+
+Output:
+1. Prime Video 1x annual subscription - 999
+2. Zee5 1x annual subscription - 999
+3. Sony liv 1x annual subscription - 999
+4. Netflix 3x standard monthly plan - 1947
+"""
+
+
+""" Use case """
+
+1:- Suggest Ram online streaming services according to his budget.
+    - Display the online streaming services available on his budget.
+    - Online Streaming Services cost list as below,
+        1. Prime Video 1x annual subscription - 999
+        2. Zee5 1x annual subscription - 999
+        3. Sony liv 1x annual subscription - 999
+        4. Netflix 3x standard monthly plan - 1947
+
+""" Test Cases """
+TC_1:- Display the services if the budget is RS 5000/-
+    Input:
+    - Please Enter your Budget: 5000/-
+    - Please Select Provider - Prime,zee5,sony liv,Netflix
+
+    Expected Result: Program should display available services in the given budgest as below:
+    Output:
+    Below subscription is/are in your budget, total cost is: 4944
+    Prime Video 1x annual subscription - 999
+    Zee5 1x annual subscription - 999
+    Sony liv 1x annual subscription - 999
+    Netflix 3x standard monthly plan - 1947
+
+    Actual Result:
+    Below subscription is/are in your budget, total cost is: 4944
+    Prime Video 1x annual subscription - 999
+    Zee5 1x annual subscription - 999
+    Sony liv 1x annual subscription - 999
+    Netflix 3x standard monthly plan - 1947
+
+    Result : Pass
+
+TC_2:- Display the services if the budget is more than RS 5000/- (10000)
+    Input:
+    - Please Enter your Budget: 5000/-
+    - Please Select Provider - Prime,zee5,sony liv,Netflix
+
+    Expected Result: Program should display all the services available because given budget is more than all the subscription total.
+    Actual Result: Displayed all the service list.
+    Result : Pass
+
+TC_3:- Input the budget less than any subscription amount and verify.
+       Note: Minimum subscription amount is RS 999/-
+
+    Input:
+    - Please Enter your Budget: 998/-
+    - Please Select Provider - Prime
+
+    Expected Result :
+    User should get below error message:
+    """ Sorry... No Subscription available for Budget provided Rupees : 998
+        Note: Minimum subscription starts from 999 or above. """
+
+    Actual Result: Displayed a error as expected.
+    Result : Pass
+
+TC_4:- Check if the user is entered budget which is total of any two subscriptions:
+    Input:
+
+    Case 1:
+    - Please Enter your Budget: 1998/-
+    - Please Select Provider - Prime,zee5
+    Output:
+        Prime Video 1x annual subscription - 999
+        Zee5 1x annual subscription - 999
+
+    Case 2:
+    - Please Enter your Budget: 1998/-
+    - Please Select Provider - Prime,sony liv
+    Output:
+        Prime Video 1x annual subscription - 999
+        Sony liv 1x annual subscription - 999
+
+    Case 3:
+    - Please Enter your Budget: 1998/-
+    - Please Select Provider - zee5,sony liv
+    Output:
+    Below subscription is/are in your budget, total cost is: 1998
+    Zee5 1x annual subscription - 999
+    Sony liv 1x annual subscription - 999
+
+    Case 4:
+    - Please Enter your Budget: 2946/-
+    - Please Select Provider - zee5,Netflix
+    Output:
+    Below subscription is/are in your budget, total cost is: 2946
+    Zee5 1x annual subscription - 999
+    Netflix 3x standard monthly plan - 1947
+
+    Case 5:
+    - Please Enter your Budget: 2946/-
+    - Please Select Provider - prime,Netflix
+    Output:
+    Below subscription is/are in your budget, total cost is: 2946
+    Prime Video 1x annual subscription - 999
+    Netflix 3x standard monthly plan - 1947
+
+    Case 6:
+    - Please Enter your Budget: 2946/-
+    - Please Select Provider - sony liv,Netflix
+    Output:
+    Below subscription is/are in your budget, total cost is: 2946
+    Sony liv 1x annual subscription - 999
+    Netflix 3x standard monthly plan - 1947
+
+    Result : Pass
+
+TC_5:- Validate the Budget filed.
+    Input:
+    Enter budget : -1
+    Enter budget : 1.00
+    Enter budget : abc
+    Enter budget : asdf12
+    Enter budget : @@
+
+    Expected Result: Invalid Input provided
+
+    Output : Displayed error as expected.
+    Result Pass
+
+TC_5:- Validate the Provider filed.
+    Input:
+    Enter : Service provider other than (Prime, zee5, sony liv, Netflix)
+    Eg : hotstar
+
+    Expected Result: Invalid Input provided
+
+    Output: Displayed error as expected
+    Result: Pass
+
+Test Case Status : All the above test cases are passed.
+
